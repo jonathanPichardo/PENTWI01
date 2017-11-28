@@ -1,0 +1,19 @@
+{
+  "name": "pentwi01",
+  "version": "1.0.0",
+  "description": "PENTWI01 Course examples and code",
+  "main": "./",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathanPichardo/PENTWI01.git"
+  },
+  "author": "J. Pichardo",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/jonathanPichardo/PENTWI01/issues"
+  },
+  "homepage": "https://github.com/jonathanPichardo/PENTWI01#readme"
+}
