@@ -4,7 +4,7 @@
   "description": "PENTWI01 Course examples and code",
   "main": "./",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "http-server ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/jonathanPichardo/PENTWI01/issues"
   },
-  "homepage": "https://github.com/jonathanPichardo/PENTWI01#readme"
+  "homepage": "https://github.com/jonathanPichardo/PENTWI01#readme",
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.1",
+    "http-server": "^0.10.0"
+  }
 }
