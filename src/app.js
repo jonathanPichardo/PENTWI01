@@ -11,14 +11,14 @@ $(function () {
         .then(_ =>
             $('.post').click((e) => {
 
-                const id = e.target.id;
-                
+                const id = (e.target !== this ? e.target.parentElement : e.target).id;
+
                 $(`#${id}`).replaceWith(buildPostComments(id));
 
                 $.get(`${url}/posts/${id}/comments`)
-                .then(res => {
-                    res.map(buildCommentArticle).forEach(art => $(`#${id}`).append(art));
-                });
+                    .then(res => {
+                        res.map(buildCommentArticle).forEach(art => $(`#${id}`).append(art));
+                    });
 
             })
         )
@@ -40,7 +40,7 @@ function buildPostComments(id) {
     return `<article id=${id} class="post-comments"></article>`;
 }
 
-function buildCommentArticle(comment){
+function buildCommentArticle(comment) {
     return `<article>
         <h4>${comment.name}</h4>
         <h6>${comment.email}</h6>
@@ -48,7 +48,7 @@ function buildCommentArticle(comment){
     </article>`
 }
 
-function closeCurrentDetails(post){
+function closeCurrentDetails(post) {
     $('#post-details').replaceWith(buildPostArticle(post));
 }
 
